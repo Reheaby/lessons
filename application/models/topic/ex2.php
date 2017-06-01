@@ -6,25 +6,36 @@ class Ex2 extends CI_Model {
 	
 	function numex2()
 	{
-		echo "<p><b>Задание:</b>вычисление факториала</p>
-			  <p>Введите целое положительное число n<br></p>";
-			  $this->load->view('formInEx_view');
+		echo "<div style = 'text-align: center;'>
+				<h1>Вычисление факториала</h1>
+				<h3>Введите целое положительное число n</h3>
+			</div>";
+				$this->load->view('formInEx_view');
+			
 				
 		function res()
 		{
 			if(isset($_POST['result'])) $result = $_POST['result'];
-			function req($i)
+			
+			if ($result != null)
 			{
-				if ($i == 0) 
+				function req($i)
 				{
-					return 1;
-				}
-				else 
-				{
-					return $i*req($i-1);
+					if ($i == 0) 
+					{
+						return 1;
+					}
+					else 
+					{
+						return $i*req($i-1);
+					};
 				};
-			};
-			echo ($result."! = ".req($result))."<br>";
+				echo "<p style = 'text-align: center;'>" . ($result."! = ".req($result))."<br>";
+			}
+			else 
+			{
+				echo "<p style = 'text-align: center;'>Непривильно введены данные</p>";
+			}
 		};
 		
 		if (isset($_POST['function_start']) == 'go') 
