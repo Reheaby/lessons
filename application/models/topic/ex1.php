@@ -5,23 +5,17 @@ class Ex1 extends CI_Model {
 
 	function numex1()
 	{
-		echo "<div style = 'text-align: center;'>
-				<form method = 'post'>
-					<h1>Вычисление корней квадратного уравнения</h1>
-					<h3>Введите данные</h3>
+		echo "<form method = 'post'>
 					<p><input type = 'text' name = 'a' style='width: 70'> x^2 +
 					<input type = 'text' name = 'b' style='width: 70'> x +
 					<input type = 'text' name = 'c' style='width: 70'>
-					<p><input type='hidden' name='function_start' value='go'></p>
 					<p><input type = 'submit' value = 'Отправить'></p>
-				</form>
-			</div>";
+				</form>";
 			
 		function res()
 		{
 			if(isset($_POST['a'])) {$a = $_POST['a'];};
-			if(isset($_POST['b'])) {$b = $_POST['b'];};
-			if(isset($_POST['c'])) {$c = $_POST['c'];};
+			
 			
 			if (($a !=null) && ($b!=null) && ($c!=null))
 			{
