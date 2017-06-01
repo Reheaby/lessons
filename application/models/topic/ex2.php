@@ -30,7 +30,7 @@ class Ex2 extends CI_Model {
 						return $i*req($i-1);
 					};
 				};
-				echo "<p style = 'text-align: center;'>" . ($result."! = ".req($result))."<br>";
+				echo "<p style = 'text-align: center;'>" . ($result."! = ".req($result))."</p>";
 			}
 			else 
 			{

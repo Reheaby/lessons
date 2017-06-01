@@ -6,8 +6,10 @@ class Ex4 extends CI_Model {
 
 	function numex4()
 	{	
-		echo "<p><b>Задание:</b>вычисление чисел Перрина</p>
-			  <p>Введите номер элемента n<br></p>";
+		echo "<div style = 'text-align: center;'>
+				<h1>Вычисление чисел Перрина</h1>
+				<h3>Введите номер элемента n</h3>
+			</div>";
 			  $this->load->view('formInEx_view');
 			  
 		function res()
@@ -35,20 +37,21 @@ class Ex4 extends CI_Model {
 			$m[2] = 2;
 			if ($result == 1) 
 			{
-				echo $m[0];
+				echo "<p style = 'text-align: center;'>" . $m[0] . "</p>";
 			}
 			elseif ($result == 2) 
 			{
-				echo $m[0]." ".$m[1];
+				echo "<p style = 'text-align: center;'>" . $m[0]." ".$m[1]. "</p>";
 			}
 			elseif ($result == 3) 
 			{
-				echo $m[0]." ".$m[1]." ".$m[2];
+				echo "<p style = 'text-align: center;'>" . $m[0]." ".$m[1]." ".$m[2]. "</p>";
 			}
 			elseif ($result>3) 
 			{
-				echo $m[0]." ".$m[1]." ".$m[2]." ";
+				echo "<p style = 'text-align: center;'>" . $m[0]." ".$m[1]." ".$m[2]." ";
 				perrin(3, $m, $result-1);
+				echo "</p>";
 			}
 			else
 			{

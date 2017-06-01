@@ -5,8 +5,10 @@ class Ex3 extends CI_Model {
 	
 	function numex3()
 	{
-		echo "<p><b>Задание:</b>вычислить числа Фибоначчи от 0 до n элемента</p>
-			  <p>Введите число элементов n<br></p>";
+		echo "<div style = 'text-align: center;'>
+				<h1>Вычисление чисел Фибоначчи</h1>
+				<h3>Введите число элементов n</h3>
+			</div>";
 			  $this->load->view('formInEx_view');
 		
 		function res() 
@@ -18,11 +20,11 @@ class Ex3 extends CI_Model {
 				$m[$i] = $m[$i-2]+$m[$i-1];
 				if ($i == $f)
 				{
-					echo $m[$i]." ";
+					echo $m[$i]. " ";
 				}
 				else 
 				{
-					echo $m[$i]." ";
+					echo $m[$i]. " ";
 					$i++;	
 					fib($i, $m, $f);
 				};
@@ -33,20 +35,21 @@ class Ex3 extends CI_Model {
 			$m[1] = 1;
 			if ($result == 1) 
 			{
-				echo $m[0];
+				echo "<p style = 'text-align: center;'>" . $m[0] . "</p>";
 			}
 			elseif ($result == 2) 
 			{
-				echo $m[0]." ".$m[1];
+				echo "<p style = 'text-align: center;'>" . $m[0]." ".$m[1] . "</p>";
 			}
 			elseif ($result>2) 
 			{
-				echo $m[0]." ".$m[1]." ";
+				echo "<p style = 'text-align: center;'>" . $m[0]." ".$m[1]. " ";
 				fib(2, $m, $result-1);
+				echo "</p>";
 			}
 			else
 			{
-				echo "Вы неправильно ввели номер эелемента";
+				echo "<p style = 'text-align: center;'>Вы неправильно ввели номер эелемента.</p>";
 			};
 		};
 		
