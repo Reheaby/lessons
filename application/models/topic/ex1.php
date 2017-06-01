@@ -2,6 +2,7 @@
 	//Квадратное уравнение
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Ex1 extends CI_Model {
+	
 
 	function numex1()
 	{
